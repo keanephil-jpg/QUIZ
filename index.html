@@ -318,718 +318,809 @@ h1 {
     // difficulty: "easy" | "medium" | "hard"
     const questions = [
       // --- EASY (examples) ---
-      {
-        difficulty: "easy",
-        question: "Which heroine rejects Mr. Collins’s proposal in favour of love rather than convenience?",
-        choices: ["Elinor Dashwood", "Elizabeth Bennet", "Fanny Price", "Emma Woodhouse"],
-        answer: 1
-      },
-      {
-        difficulty: "easy",
-        question: "Who is the brooding master of Thornfield Hall in 'Jane Eyre'?",
-        choices: ["Heathcliff", "Mr. Rochester", "Mr. Darcy", "Gabriel Oak"],
-        answer: 1
-      },
-      {
-        difficulty: "easy",
-        question: "In which novel do we meet the spirited Bathsheba Everdene?",
-        choices: [
-          "Far from the Madding Crowd",
-          "Tess of the d’Urbervilles",
-          "The Mayor of Casterbridge",
-          "Jude the Obscure"
-        ],
-        answer: 0
-      },
-      {
-        difficulty: "easy",
-        question: "Which character famously declares that a single man in possession of a good fortune must be in want of a wife?",
-        choices: [
-          "Mrs. Bennet",
-          "Mr. Bennet",
-          "The narrator of 'Pride and Prejudice'",
-          "Lady Catherine de Bourgh"
-        ],
-        answer: 2
-      },
-      {
-        difficulty: "easy",
-        question: "Who is the quiet, observant governess at Thornfield Hall?",
-        choices: ["Jane Eyre", "Agnes Grey", "Helen Graham", "Catherine Earnshaw"],
-        answer: 0
-      },
-      {
-        difficulty: "easy",
-        question: "Which Austen heroine is described as handsome, clever, and rich?",
-        choices: ["Anne Elliot", "Emma Woodhouse", "Catherine Morland", "Marianne Dashwood"],
-        answer: 1
-      },
-      {
-        difficulty: "easy",
-        question: "Heathcliff is most closely associated with which wild, windswept setting?",
-        choices: ["Egdon Heath", "Casterbridge", "Wuthering Heights", "Bath"],
-        answer: 2
-      },
-      {
-        difficulty: "easy",
-        question: "Which Hardy character is a humble shepherd who remains steadfastly loyal?",
-        choices: ["Angel Clare", "Gabriel Oak", "Clym Yeobright", "Michael Henchard"],
-        answer: 1
-      },
-      {
-        difficulty: "easy",
-        question: "In 'Sense and Sensibility', which sister is more reserved and rational?",
-        choices: ["Marianne", "Elinor", "Lucy Steele", "Margaret"],
-        answer: 1
-      },
-      {
-        difficulty: "easy",
-        question: "Who is the shy, overlooked clergyman’s daughter in 'Agnes Grey'?",
-        choices: ["Agnes", "Jane", "Lucy", "Fanny"],
-        answer: 0
-      },
-      {
+      // --- EASY (examples) ---
+{
+  difficulty: "easy",
+  question: "Which heroine rejects Mr. Collins’s proposal in favour of love rather than convenience?",
+  choices: ["Elinor Dashwood", "Elizabeth Bennet", "Fanny Price", "Emma Woodhouse"],
+  answer: 1
+},
+{
+  difficulty: "easy",
+  question: "Who is the brooding master of Thornfield Hall in 'Jane Eyre'?",
+  choices: ["Heathcliff", "Mr. Rochester", "Mr. Darcy", "Gabriel Oak"],
+  answer: 1
+},
+{
+  difficulty: "easy",
+  question: "In which novel do we meet the spirited Bathsheba Everdene?",
+  choices: [
+    "Far from the Madding Crowd",
+    "Tess of the d’Urbervilles",
+    "The Mayor of Casterbridge",
+    "Jude the Obscure"
+  ],
+  answer: 0
+},
+{
+  difficulty: "easy",
+  question: "Which character famously declares that a single man in possession of a good fortune must be in want of a wife?",
+  choices: [
+    "Mrs. Bennet",
+    "Mr. Bennet",
+    "The narrator of 'Pride and Prejudice'",
+    "Lady Catherine de Bourgh"
+  ],
+  answer: 2
+},
+{
+  difficulty: "easy",
+  question: "Who is the quiet, observant governess at Thornfield Hall?",
+  choices: ["Jane Eyre", "Agnes Grey", "Helen Graham", "Catherine Earnshaw"],
+  answer: 0
+},
+{
+  difficulty: "easy",
+  question: "Which Austen heroine is described as handsome, clever, and rich?",
+  choices: ["Anne Elliot", "Emma Woodhouse", "Catherine Morland", "Marianne Dashwood"],
+  answer: 1
+},
+{
+  difficulty: "easy",
+  question: "Heathcliff is most closely associated with which wild, windswept setting?",
+  choices: ["Egdon Heath", "Casterbridge", "Wuthering Heights", "Bath"],
+  answer: 2
+},
+{
+  difficulty: "easy",
+  question: "Which Hardy character is a humble shepherd who remains steadfastly loyal?",
+  choices: ["Angel Clare", "Gabriel Oak", "Clym Yeobright", "Michael Henchard"],
+  answer: 1
+},
+{
+  difficulty: "easy",
+  question: "In 'Sense and Sensibility', which sister is more reserved and rational?",
+  choices: ["Marianne", "Elinor", "Lucy Steele", "Margaret"],
+  answer: 1
+},
+{
+  difficulty: "easy",
+  question: "Who is the shy, overlooked clergyman’s daughter in 'Agnes Grey'?",
+  choices: ["Agnes", "Jane", "Lucy", "Fanny"],
+  answer: 0
+},
+
+{
+  difficulty: "easy",
   question: "Which Dickens character keeps insisting he is 'very humble'?",
   choices: ["Uriah Heep", "Mr. Micawber", "Joe Gargery", "Mr. Bumble"],
-  answer: "Uriah Heep"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Who is Sherlock Holmes’ loyal companion?",
   choices: ["Inspector Lestrade", "Dr. Watson", "Mycroft Holmes", "Colonel Moran"],
-  answer: "Dr. Watson"
+  answer: 1
 },
 {
+  difficulty: "easy",
   question: "Which Dickens orphan asks for 'more'?",
   choices: ["Oliver Twist", "David Copperfield", "Tiny Tim", "Smike"],
-  answer: "Oliver Twist"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Who raises Pip 'by hand' in Great Expectations?",
   choices: ["Miss Havisham", "Mrs. Joe Gargery", "Biddy", "Estella"],
-  answer: "Mrs. Joe Gargery"
+  answer: 1
 },
 {
+  difficulty: "easy",
   question: "Who is Darcy’s loyal friend in Pride and Prejudice?",
   choices: ["Mr. Collins", "Mr. Bingley", "Colonel Fitzwilliam", "Mr. Gardiner"],
-  answer: "Mr. Bingley"
+  answer: 1
 },
 {
+  difficulty: "easy",
   question: "Who is the brooding master of Manderley in Rebecca?",
   choices: ["Jack Favell", "Maxim de Winter", "Frank Crawley", "Giles Lacy"],
-  answer: "Maxim de Winter"
+  answer: 1
 },
 {
+  difficulty: "easy",
   question: "Who famously roams the moors in anguish?",
   choices: ["Edgar Linton", "Heathcliff", "Mr. Lockwood", "Hindley Earnshaw"],
-  answer: "Heathcliff"
+  answer: 1
 },
 {
+  difficulty: "easy",
   question: "Who is the spirited heroine of North and South?",
   choices: ["Margaret Hale", "Lucy Snowe", "Eleanor Tilney", "Helen Graham"],
-  answer: "Margaret Hale"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Who paints Dorian’s portrait in The Picture of Dorian Gray?",
   choices: ["Lord Henry", "Basil Hallward", "Alan Campbell", "James Vane"],
-  answer: "Basil Hallward"
+  answer: 1
 },
 {
+  difficulty: "easy",
   question: "Who is the narrator of Wuthering Heights?",
   choices: ["Nelly Dean", "Catherine Earnshaw", "Isabella Linton", "Frances Earnshaw"],
-  answer: "Nelly Dean"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Which character is obsessed with matchmaking?",
   choices: ["Emma Woodhouse", "Elizabeth Bennet", "Fanny Price", "Elinor Dashwood"],
-  answer: "Emma Woodhouse"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Who is the shy clergyman’s daughter in Agnes Grey?",
   choices: ["Agnes", "Jane", "Lucy", "Fanny"],
-  answer: "Agnes"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Which character is known for crying 'Off with their heads!'?",
   choices: ["The White Queen", "The Red Queen", "The Queen of Hearts", "The Duchess"],
-  answer: "The Queen of Hearts"
+  answer: 2
 },
 {
+  difficulty: "easy",
   question: "Who is the narrator trying to protect in The Turn of the Screw?",
   choices: ["Miles and Flora", "Edmund and Lucy", "Philip and Agnes", "James and Clara"],
-  answer: "Miles and Flora"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Which character is known for his obsession with a white whale?",
   choices: ["Ishmael", "Captain Ahab", "Queequeg", "Starbuck"],
-  answer: "Captain Ahab"
+  answer: 1
 },
 {
+  difficulty: "easy",
   question: "Who is the tragic innocent heroine in Tess of the d’Urbervilles?",
   choices: ["Tess Durbeyfield", "Bathsheba Everdene", "Eustacia Vye", "Marty South"],
-  answer: "Tess Durbeyfield"
+  answer: 0
 },
 {
+  difficulty: "easy",
   question: "Who is the mysterious woman in the attic in Jane Eyre?",
   choices: ["Blanche Ingram", "Grace Poole", "Bertha Mason", "Diana Rivers"],
-  answer: "Bertha Mason"
+  answer: 2
 },
 {
+  difficulty: "easy",
   question: "Who marries Dorothea Brooke in Middlemarch?",
   choices: ["Will Ladislaw", "Tertius Lydgate", "Edward Casaubon", "Fred Vincy"],
-  answer: "Edward Casaubon"
+  answer: 2
 },
 {
+  difficulty: "easy",
   question: "Which Hardy character is described as 'Queen of the Night'?",
   choices: ["Tess", "Bathsheba", "Eustacia Vye", "Arabella Donn"],
-  answer: "Eustacia Vye"
+  answer: 2
 },
 {
+  difficulty: "easy",
   question: "Who is the heroine of Far from the Madding Crowd?",
   choices: ["Bathsheba Everdene", "Tess Durbeyfield", "Sue Bridehead", "Arabella Donn"],
-  answer: "Bathsheba Everdene"
+  answer: 0
 }
 
 
-      // --- MEDIUM (examples) ---
-      {
-        difficulty: "medium",
-        question: "Which character in 'Pride and Prejudice' is described as having a mixture of quick parts, sarcastic humour, and caprice?",
-        choices: ["Mr. Bennet", "Mr. Darcy", "Mr. Bingley", "Colonel Fitzwilliam"],
-        answer: 0
-      },
-      {
-        difficulty: "medium",
-        question: "In 'Wuthering Heights', who narrates much of the story to Mr. Lockwood?",
-        choices: ["Catherine Earnshaw", "Nelly Dean", "Isabella Linton", "Hareton Earnshaw"],
-        answer: 1
-      },
-      {
-        difficulty: "medium",
-        question: "Which Hardy heroine sends back a valentine that unintentionally entangles her with a farmer?",
-        choices: ["Tess Durbeyfield", "Bathsheba Everdene", "Eustacia Vye", "Sue Bridehead"],
-        answer: 1
-      },
-      {
-        difficulty: "medium",
-        question: "Anne Elliot’s lost love, later returned as a naval officer, is named:",
-        choices: [
-          "Captain Wentworth",
-          "Colonel Brandon",
-          "Captain Benwick",
-          "Mr. Knightley"
-        ],
-        answer: 0
-      },
-      {
-        difficulty: "medium",
-        question: "Which Brontë novel features the tenant of Wildfell Hall?",
-        choices: [
-          "Jane Eyre",
-          "Villette",
-          "The Tenant of Wildfell Hall",
-          "Shirley"
-        ],
-        answer: 2
-      },
-      {
-        difficulty: "medium",
-        question: "In 'Tess of the d’Urbervilles', Tess first works at which kind of establishment?",
-        choices: ["A dairy", "A poultry farm", "A large estate house", "A public inn"],
-        answer: 2
-      },
-      {
-        difficulty: "medium",
-        question: "Which character is known for his proud reserve but later proves deeply loyal to Jane Eyre?",
-        choices: ["St. John Rivers", "Mr. Rochester", "Mr. Brocklehurst", "John Reed"],
-        answer: 1
-      },
-      {
-        difficulty: "medium",
-        question: "In 'Far from the Madding Crowd', which suitor is a dashing but unreliable soldier?",
-        choices: ["Boldwood", "Gabriel Oak", "Sergeant Troy", "Clym Yeobright"],
-        answer: 2
-      },
-      {
-        difficulty: "medium",
-        question: "Which Austen character is obsessed with matchmaking and meddling in others’ romances?",
-        choices: ["Emma Woodhouse", "Elizabeth Bennet", "Fanny Price", "Catherine Morland"],
-        answer: 0
-      },
-      {
-        difficulty: "medium",
-        question: "In 'Jude the Obscure', Jude Fawley dreams of studying in which university town?",
-        choices: ["Cambridge", "Oxford (Christminster)", "Bath", "Exeter"],
-        answer: 1
-      },
-    {
+     // --- MEDIUM (examples) ---
+{
+  difficulty: "medium",
+  question: "Which character in 'Pride and Prejudice' is described as having a mixture of quick parts, sarcastic humour, and caprice?",
+  choices: ["Mr. Bennet", "Mr. Darcy", "Mr. Bingley", "Colonel Fitzwilliam"],
+  answer: 0
+},
+{
+  difficulty: "medium",
+  question: "In 'Wuthering Heights', who narrates much of the story to Mr. Lockwood?",
+  choices: ["Catherine Earnshaw", "Nelly Dean", "Isabella Linton", "Hareton Earnshaw"],
+  answer: 1
+},
+{
+  difficulty: "medium",
+  question: "Which Hardy heroine sends back a valentine that unintentionally entangles her with a farmer?",
+  choices: ["Tess Durbeyfield", "Bathsheba Everdene", "Eustacia Vye", "Sue Bridehead"],
+  answer: 1
+},
+{
+  difficulty: "medium",
+  question: "Anne Elliot’s lost love, later returned as a naval officer, is named:",
+  choices: ["Captain Wentworth", "Colonel Brandon", "Captain Benwick", "Mr. Knightley"],
+  answer: 0
+},
+{
+  difficulty: "medium",
+  question: "Which Brontë novel features the tenant of Wildfell Hall?",
+  choices: ["Jane Eyre", "Villette", "The Tenant of Wildfell Hall", "Shirley"],
+  answer: 2
+},
+{
+  difficulty: "medium",
+  question: "In 'Tess of the d’Urbervilles', Tess first works at which kind of establishment?",
+  choices: ["A dairy", "A poultry farm", "A large estate house", "A public inn"],
+  answer: 2
+},
+{
+  difficulty: "medium",
+  question: "Which character is known for his proud reserve but later proves deeply loyal to Jane Eyre?",
+  choices: ["St. John Rivers", "Mr. Rochester", "Mr. Brocklehurst", "John Reed"],
+  answer: 1
+},
+{
+  difficulty: "medium",
+  question: "In 'Far from the Madding Crowd', which suitor is a dashing but unreliable soldier?",
+  choices: ["Boldwood", "Gabriel Oak", "Sergeant Troy", "Clym Yeobright"],
+  answer: 2
+},
+{
+  difficulty: "medium",
+  question: "Which Austen character is obsessed with matchmaking and meddling in others’ romances?",
+  choices: ["Emma Woodhouse", "Elizabeth Bennet", "Fanny Price", "Catherine Morland"],
+  answer: 0
+},
+{
+  difficulty: "medium",
+  question: "In 'Jude the Obscure', Jude Fawley dreams of studying in which university town?",
+  choices: ["Cambridge", "Oxford (Christminster)", "Bath", "Exeter"],
+  answer: 1
+},
+
+{
+  difficulty: "medium",
   question: "Which Brontë novel features the character Helen Graham?",
   choices: ["Villette", "The Tenant of Wildfell Hall", "Shirley", "Agnes Grey"],
-  answer: "The Tenant of Wildfell Hall"
+  answer: 1
 },
 {
+  difficulty: "medium",
   question: "Who is the proud and aloof master of Thornfield Hall?",
   choices: ["Mr. Rochester", "St. John Rivers", "Mr. Brocklehurst", "Mr. Fairfax"],
-  answer: "Mr. Rochester"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which Dickens character is known for his legal case 'Jarndyce and Jarndyce'?",
   choices: ["John Jarndyce", "Sydney Carton", "Mr. Tulkinghorn", "Harold Skimpole"],
-  answer: "John Jarndyce"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Middlemarch, who is the ambitious young doctor?",
   choices: ["Will Ladislaw", "Tertius Lydgate", "Fred Vincy", "Nicholas Bulstrode"],
-  answer: "Tertius Lydgate"
+  answer: 1
 },
 {
+  difficulty: "medium",
   question: "Which character is the stern housekeeper at Wuthering Heights?",
   choices: ["Zillah", "Nelly Dean", "Frances Earnshaw", "Mrs. Linton"],
-  answer: "Zillah"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Who is the heroine of George Eliot’s Daniel Deronda?",
   choices: ["Gwendolen Harleth", "Dinah Morris", "Rosamond Vincy", "Maggie Tulliver"],
-  answer: "Gwendolen Harleth"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which Hardy novel features the character Sue Bridehead?",
   choices: ["Jude the Obscure", "The Woodlanders", "The Return of the Native", "Under the Greenwood Tree"],
-  answer: "Jude the Obscure"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Who is the governess in Charlotte Brontë’s Villette?",
   choices: ["Lucy Snowe", "Caroline Helstone", "Jane Eyre", "Shirley Keeldar"],
-  answer: "Lucy Snowe"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which Austen character is described as having 'a lively, playful disposition'?",
   choices: ["Elizabeth Bennet", "Marianne Dashwood", "Emma Woodhouse", "Catherine Morland"],
-  answer: "Elizabeth Bennet"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Great Expectations, who is Pip’s loyal friend from the forge?",
   choices: ["Herbert Pocket", "Joe Gargery", "Wemmick", "Startop"],
-  answer: "Joe Gargery"
+  answer: 1
 },
 {
+  difficulty: "medium",
   question: "Which character is the stern, religious cousin in Jane Eyre?",
   choices: ["St. John Rivers", "Mr. Brocklehurst", "Richard Mason", "Lord Ingram"],
-  answer: "St. John Rivers"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Who is the tragic heroine of The Mill on the Floss?",
   choices: ["Maggie Tulliver", "Dinah Morris", "Hetty Sorrel", "Dorothea Brooke"],
-  answer: "Maggie Tulliver"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which Dickens character is known for his obsession with punctuality?",
   choices: ["Mr. Gradgrind", "Mr. Pancks", "Mr. Jaggers", "Mr. Turveydrop"],
-  answer: "Mr. Pancks"
+  answer: 1
 },
 {
+  difficulty: "medium",
   question: "Who is the mysterious sailor in Lord Jim?",
   choices: ["Jim", "Marlow", "Stein", "Brown"],
-  answer: "Jim"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character is the manipulative cousin in Wuthering Heights?",
   choices: ["Linton Heathcliff", "Hareton Earnshaw", "Joseph", "Edgar Linton"],
-  answer: "Linton Heathcliff"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Tess of the d’Urbervilles, who is Tess’s devoted admirer?",
   choices: ["Alec d’Urberville", "Angel Clare", "Cuthbert Clare", "Farmer Groby"],
-  answer: "Angel Clare"
+  answer: 1
 },
 {
+  difficulty: "medium",
   question: "Which character is the ambitious young clerk in David Copperfield?",
   choices: ["Uriah Heep", "Tommy Traddles", "Steerforth", "Mr. Micawber"],
-  answer: "Uriah Heep"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Who is the heroine of Northanger Abbey?",
   choices: ["Catherine Morland", "Fanny Price", "Anne Elliot", "Harriet Smith"],
-  answer: "Catherine Morland"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character is the stern schoolmaster in Jane Eyre?",
   choices: ["Mr. Brocklehurst", "Mr. Mason", "Mr. Fairfax", "Mr. Eshton"],
-  answer: "Mr. Brocklehurst"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In The Return of the Native, who is the quiet, steadfast suitor of Thomasin?",
   choices: ["Diggory Venn", "Clym Yeobright", "Damon Wildeve", "Captain Vye"],
-  answer: "Diggory Venn"
-}
-    {
+  answer: 0
+},
+{
+  difficulty: "medium",
   question: "In Jane Eyre, who is the kindly servant who helps Jane during her early days at Thornfield?",
   choices: ["Mrs. Fairfax", "Grace Poole", "Bessie", "Diana Rivers"],
-  answer: "Mrs. Fairfax"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in Great Expectations is known for his 'portable property' philosophy?",
   choices: ["Wemmick", "Jaggers", "Pumblechook", "Drummle"],
-  answer: "Wemmick"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Wuthering Heights, who is the gentle, bookish son of Edgar Linton?",
   choices: ["Linton Heathcliff", "Hareton Earnshaw", "Joseph", "Mr. Green"],
-  answer: "Linton Heathcliff"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in Middlemarch is the devoted wife of the ambitious Dr. Lydgate?",
   choices: ["Rosamond Vincy", "Dorothea Brooke", "Mary Garth", "Celia Brooke"],
-  answer: "Rosamond Vincy"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Tess of the d’Urbervilles, who is Tess’s younger sister?",
   choices: ["Liza-Lu", "Mercy Chant", "Izz Huett", "Retty Priddle"],
-  answer: "Liza-Lu"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in North and South is the outspoken union worker who challenges Margaret?",
   choices: ["Nicholas Higgins", "Leonard", "Mr. Bell", "John Thornton"],
-  answer: "Nicholas Higgins"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In The Picture of Dorian Gray, who is the young woman Dorian cruelly rejects?",
   choices: ["Sibyl Vane", "Gladys", "Lady Narborough", "Hetty Merton"],
-  answer: "Sibyl Vane"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in The Scarlet Letter is Pearl’s fiercely protective mother?",
   choices: ["Hester Prynne", "Mistress Hibbins", "Anne Hutchinson", "Goody Cloyse"],
-  answer: "Hester Prynne"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Far from the Madding Crowd, who is the wealthy but emotionally unstable farmer?",
   choices: ["Boldwood", "Gabriel Oak", "Sergeant Troy", "Cainy Ball"],
-  answer: "Boldwood"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in David Copperfield is known for his perpetual optimism despite hardship?",
   choices: ["Mr. Micawber", "Traddles", "Steerforth", "Mr. Wickfield"],
-  answer: "Mr. Micawber"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In The Tenant of Wildfell Hall, who is the quiet, supportive friend of Helen?",
   choices: ["Mr. Lawrence", "Mr. Hargrave", "Lord Lowborough", "Arthur Huntingdon"],
-  answer: "Mr. Lawrence"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in The Mill on the Floss is Maggie’s loyal but strict brother?",
   choices: ["Tom Tulliver", "Philip Wakem", "Bob Jakin", "Stephen Guest"],
-  answer: "Tom Tulliver"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In The Woman in White, who is the intelligent and determined half-sister of Laura Fairlie?",
   choices: ["Marian Halcombe", "Anne Catherick", "Mrs. Clements", "Eliza Michelson"],
-  answer: "Marian Halcombe"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in Jude the Obscure is Jude’s first wife?",
   choices: ["Arabella Donn", "Sue Bridehead", "Mrs. Edlin", "Annie Cartlett"],
-  answer: "Arabella Donn"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Middlemarch, who is the clergyman secretly in love with Mary Garth?",
   choices: ["Mr. Farebrother", "Fred Vincy", "Will Ladislaw", "Caleb Garth"],
-  answer: "Mr. Farebrother"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in Jane Eyre is the beautiful but cold socialite competing for Rochester’s attention?",
   choices: ["Blanche Ingram", "Miss Temple", "Georgiana Reed", "Rosamond Oliver"],
-  answer: "Blanche Ingram"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In Great Expectations, who is the cruel, brutish man who torments Pip at Satis House?",
   choices: ["Bentley Drummle", "Orlick", "Compeyson", "Startop"],
-  answer: "Bentley Drummle"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in Northanger Abbey is obsessed with Gothic novels?",
   choices: ["Catherine Morland", "Isabella Thorpe", "Eleanor Tilney", "Harriet Smith"],
-  answer: "Catherine Morland"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "In The Return of the Native, who is the well‑meaning but unlucky mother of Clym?",
   choices: ["Mrs. Yeobright", "Thomasin", "Eustacia", "Susan Nunsuch"],
-  answer: "Mrs. Yeobright"
+  answer: 0
 },
 {
+  difficulty: "medium",
   question: "Which character in The Mayor of Casterbridge is the woman Henchard rashly sells at a fair?",
   choices: ["Susan Henchard", "Lucetta Templeman", "Elizabeth-Jane", "Mrs. Goodenough"],
-  answer: "Susan Henchard"
-},
+  answer: 0
+}
 
 
 
       // --- HARD (examples) ---
-      {
-        difficulty: "hard",
-        question: "Which minor character in 'Pride and Prejudice' is described as having a very small park and a comfortable house, and is eager to impress Lady Catherine?",
-        choices: ["Mr. Collins", "Sir William Lucas", "Mr. Hurst", "Colonel Forster"],
-        answer: 1
-      },
-      {
-        difficulty: "hard",
-        question: "In 'Jane Eyre', which character’s fortune comes from a Madeira connection and is later shared with Jane?",
-        choices: ["St. John Rivers", "Diana Rivers", "Mary Rivers", "Their uncle John Eyre"],
-        answer: 3
-      },
-      {
-        difficulty: "hard",
-        question: "Which Hardy character is known as the 'Reddleman', wandering the heath stained red from his trade?",
-        choices: ["Diggory Venn", "Giles Winterborne", "Jude Fawley", "Michael Henchard"],
-        answer: 0
-      },
-      {
-        difficulty: "hard",
-        question: "In 'Villette', Lucy Snowe’s feelings are most deeply engaged with which character?",
-        choices: ["Dr. John Graham Bretton", "M. Paul Emanuel", "Monsieur Pelet", "Mr. Home"],
-        answer: 1
-      },
-      {
-        difficulty: "hard",
-        question: "Which Austen character is criticised for having 'no conversation, no style, no taste, no beauty' but a large fortune?",
-        choices: ["Miss Grey", "Miss King", "Miss Bingley", "Miss Morton"],
-        answer: 3
-      },
-      {
-        difficulty: "hard",
-        question: "In 'The Return of the Native', which character is strongly associated with the bonfires on Guy Fawkes Night?",
-        choices: ["Thomasin Yeobright", "Eustacia Vye", "Clym Yeobright", "Diggory Venn"],
-        answer: 1
-      },
-      {
-        difficulty: "hard",
-        question: "Which Brontë novel features the character of Caroline Helstone?",
-        choices: ["Shirley", "Agnes Grey", "The Tenant of Wildfell Hall", "Villette"],
-        answer: 0
-      },
-      {
-        difficulty: "hard",
-        question: "In 'Mansfield Park', which character is most drawn to amateur theatricals, causing moral concern?",
-        choices: ["Fanny Price", "Edmund Bertram", "Mary Crawford", "Maria Bertram"],
-        answer: 2
-      },
-      {
-        difficulty: "hard",
-        question: "Which Hardy novel includes the tragic character of Sue Bridehead?",
-        choices: [
-          "The Mayor of Casterbridge",
-          "Jude the Obscure",
-          "The Woodlanders",
-          "Two on a Tower"
-        ],
-        answer: 1
-      },
-      {
-        difficulty: "hard",
-        question: "In 'Wuthering Heights', which character inherits Thrushcross Grange at the end of the novel?",
-        choices: ["Hareton Earnshaw", "Cathy Linton", "Linton Heathcliff", "Joseph"],
-        answer: 0
-      }
-    {
+     // --- HARD (examples) ---
+{
+  difficulty: "hard",
+  question: "Which minor character in 'Pride and Prejudice' is described as having a very small park and a comfortable house, and is eager to impress Lady Catherine?",
+  choices: ["Mr. Collins", "Sir William Lucas", "Mr. Hurst", "Colonel Forster"],
+  answer: 1
+},
+{
+  difficulty: "hard",
+  question: "In 'Jane Eyre', which character’s fortune comes from a Madeira connection and is later shared with Jane?",
+  choices: ["St. John Rivers", "Diana Rivers", "Mary Rivers", "Their uncle John Eyre"],
+  answer: 3
+},
+{
+  difficulty: "hard",
+  question: "Which Hardy character is known as the 'Reddleman', wandering the heath stained red from his trade?",
+  choices: ["Diggory Venn", "Giles Winterborne", "Jude Fawley", "Michael Henchard"],
+  answer: 0
+},
+{
+  difficulty: "hard",
+  question: "In 'Villette', Lucy Snowe’s feelings are most deeply engaged with which character?",
+  choices: ["Dr. John Graham Bretton", "M. Paul Emanuel", "Monsieur Pelet", "Mr. Home"],
+  answer: 1
+},
+{
+  difficulty: "hard",
+  question: "Which Austen character is criticised for having 'no conversation, no style, no taste, no beauty' but a large fortune?",
+  choices: ["Miss Grey", "Miss King", "Miss Bingley", "Miss Morton"],
+  answer: 3
+},
+{
+  difficulty: "hard",
+  question: "In 'The Return of the Native', which character is strongly associated with the bonfires on Guy Fawkes Night?",
+  choices: ["Thomasin Yeobright", "Eustacia Vye", "Clym Yeobright", "Diggory Venn"],
+  answer: 1
+},
+{
+  difficulty: "hard",
+  question: "Which Brontë novel features the character of Caroline Helstone?",
+  choices: ["Shirley", "Agnes Grey", "The Tenant of Wildfell Hall", "Villette"],
+  answer: 0
+},
+{
+  difficulty: "hard",
+  question: "In 'Mansfield Park', which character is most drawn to amateur theatricals, causing moral concern?",
+  choices: ["Fanny Price", "Edmund Bertram", "Mary Crawford", "Maria Bertram"],
+  answer: 2
+},
+{
+  difficulty: "hard",
+  question: "Which Hardy novel includes the tragic character of Sue Bridehead?",
+  choices: ["The Mayor of Casterbridge", "Jude the Obscure", "The Woodlanders", "Two on a Tower"],
+  answer: 1
+},
+{
+  difficulty: "hard",
+  question: "In 'Wuthering Heights', which character inherits Thrushcross Grange at the end of the novel?",
+  choices: ["Hareton Earnshaw", "Cathy Linton", "Linton Heathcliff", "Joseph"],
+  answer: 0
+},
+
+{
+  difficulty: "hard",
   question: "Which character in Middlemarch is secretly connected to a scandalous past under another name?",
   choices: ["Nicholas Bulstrode", "Will Ladislaw", "Tertius Lydgate", "Caleb Garth"],
-  answer: "Nicholas Bulstrode"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In Wuthering Heights, who is the child that becomes both a niece and a daughter‑in‑law within the Earnshaw–Linton family tangle?",
   choices: ["Cathy Linton", "Isabella Linton", "Frances Earnshaw", "Zillah"],
-  answer: "Cathy Linton"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in Jude the Obscure is known for her intellectual rebellion and refusal to conform to marriage expectations?",
   choices: ["Arabella Donn", "Sue Bridehead", "Mrs. Edlin", "Annie Cartlett"],
-  answer: "Sue Bridehead"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "In Villette, who is the enigmatic schoolmaster with whom Lucy Snowe forms a deep, complex bond?",
   choices: ["Dr. John Graham", "M. Paul Emanuel", "Mr. Home", "M. Pelet"],
-  answer: "M. Paul Emanuel"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "Which character in Bleak House is destroyed by the endless legal case of Jarndyce and Jarndyce?",
   choices: ["Richard Carstone", "Harold Skimpole", "Mr. Guppy", "Allan Woodcourt"],
-  answer: "Richard Carstone"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In The Tenant of Wildfell Hall, who is the manipulative, self‑indulgent husband Helen ultimately escapes?",
   choices: ["Lord Lowborough", "Arthur Huntingdon", "Mr. Hargrave", "Mr. Lawrence"],
-  answer: "Arthur Huntingdon"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "Which character in Tess of the d’Urbervilles is described as having 'a spiritualized image' that haunts Tess?",
   choices: ["Angel Clare", "Alec d’Urberville", "Cuthbert Clare", "Farmer Crick"],
-  answer: "Angel Clare"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In Great Expectations, which character is revealed to be Pip’s true benefactor?",
   choices: ["Miss Havisham", "Jaggers", "Magwitch", "Compeyson"],
-  answer: "Magwitch"
+  answer: 2
 },
 {
+  difficulty: "hard",
   question: "Which character in The Mill on the Floss is torn between duty to her family and forbidden love?",
   choices: ["Maggie Tulliver", "Lucy Deane", "Mrs. Tulliver", "Hetty Sorrel"],
-  answer: "Maggie Tulliver"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In The Return of the Native, who is the man Eustacia Vye believes will rescue her from Egdon Heath?",
   choices: ["Clym Yeobright", "Damon Wildeve", "Diggory Venn", "Thomasin Yeobright"],
-  answer: "Clym Yeobright"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in Jane Eyre is responsible for the mysterious laughter heard in Thornfield?",
   choices: ["Grace Poole", "Bertha Mason", "Adele Varens", "Mrs. Fairfax"],
-  answer: "Bertha Mason"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "In Daniel Deronda, who is the young Jewish woman searching for her heritage?",
   choices: ["Gwendolen Harleth", "Mirah Lapidoth", "Catherine Arrowpoint", "Mrs. Meyrick"],
-  answer: "Mirah Lapidoth"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "Which character in David Copperfield is known for his cold, calculating manipulation of others?",
   choices: ["Steerforth", "Uriah Heep", "Mr. Murdstone", "Mr. Wickfield"],
-  answer: "Uriah Heep"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "In North and South, who is the mill owner whose relationship with Margaret Hale evolves from conflict to admiration?",
   choices: ["Nicholas Higgins", "Mr. Bell", "John Thornton", "Frederick Hale"],
-  answer: "John Thornton"
+  answer: 2
 },
 {
+  difficulty: "hard",
   question: "Which character in The Woman in White is the cunning mastermind behind the conspiracy?",
   choices: ["Sir Percival Glyde", "Count Fosco", "Walter Hartright", "Mr. Fairlie"],
-  answer: "Count Fosco"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "In Far from the Madding Crowd, who is the steadfast shepherd devoted to Bathsheba?",
   choices: ["Sergeant Troy", "Boldwood", "Gabriel Oak", "Liddy Smallbury"],
-  answer: "Gabriel Oak"
+  answer: 2
 },
 {
+  difficulty: "hard",
   question: "Which character in Little Dorrit is imprisoned in the Marshalsea for debt?",
   choices: ["Arthur Clennam", "Mr. Dorrit", "Flintwinch", "Pancks"],
-  answer: "Mr. Dorrit"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "In The Scarlet Letter, who becomes consumed by revenge against Dimmesdale?",
   choices: ["Governor Bellingham", "Roger Chillingworth", "John Wilson", "Mistress Hibbins"],
-  answer: "Roger Chillingworth"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "Which character in Wuthering Heights is described as 'a fiend of a child' and grows into a cruel, vengeful man?",
   choices: ["Hareton Earnshaw", "Linton Heathcliff", "Heathcliff", "Hindley Earnshaw"],
-  answer: "Hindley Earnshaw"
+  answer: 3
 },
 {
+  difficulty: "hard",
   question: "In Jude the Obscure, who is Jude’s idealistic but ultimately disillusioned mentor figure?",
   choices: ["Arabella Donn", "Sue Bridehead", "Mr. Phillotson", "Dr. Vilbert"],
-  answer: "Mr. Phillotson"
+  answer: 2
 },
-    {
+{
+  difficulty: "hard",
   question: "In Middlemarch, who is the banker whose past misdeeds threaten to ruin his respectability?",
   choices: ["Nicholas Bulstrode", "Caleb Garth", "Mr. Farebrother", "Peter Featherstone"],
-  answer: "Nicholas Bulstrode"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in Wuthering Heights is described as 'a dark-skinned gypsy in aspect' when first found?",
   choices: ["Heathcliff", "Hareton Earnshaw", "Linton Heathcliff", "Joseph"],
-  answer: "Heathcliff"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In Jude the Obscure, who pressures Jude into a disastrous early marriage?",
   choices: ["Arabella Donn", "Sue Bridehead", "Mrs. Edlin", "Aunt Drusilla"],
-  answer: "Arabella Donn"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in Bleak House is the obsessive law-writer who hoards documents?",
   choices: ["Mr. Krook", "Mr. Snagsby", "Mr. Guppy", "Mr. Vholes"],
-  answer: "Mr. Krook"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In The Tenant of Wildfell Hall, who attempts to manipulate Helen with unwanted romantic advances?",
   choices: ["Mr. Hargrave", "Mr. Lawrence", "Lord Lowborough", "Arthur Huntingdon"],
-  answer: "Mr. Hargrave"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in The Return of the Native is fatally drawn to the idea of escape and glamour?",
   choices: ["Eustacia Vye", "Thomasin Yeobright", "Mrs. Yeobright", "Charley"],
-  answer: "Eustacia Vye"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In Daniel Deronda, who is the controlling husband whose marriage to Gwendolen becomes a psychological battle?",
   choices: ["Grandcourt", "Deronda", "Lush", "Sir Hugo Mallinger"],
-  answer: "Grandcourt"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in Great Expectations is the lawyer known for his cold precision and intimidating presence?",
   choices: ["Jaggers", "Wemmick", "Pumblechook", "Drummle"],
-  answer: "Jaggers"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In The Mill on the Floss, who is the charming but morally weak man Maggie becomes entangled with?",
   choices: ["Philip Wakem", "Stephen Guest", "Bob Jakin", "Tom Tulliver"],
-  answer: "Stephen Guest"
+  answer: 1
 },
 {
+  difficulty: "hard",
   question: "Which character in North and South is the union leader who forms an unlikely friendship with Margaret?",
   choices: ["Nicholas Higgins", "John Thornton", "Mr. Bell", "Leonard"],
-  answer: "Nicholas Higgins"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In The Woman in White, who is the mysterious woman who warns Walter Hartright of danger?",
   choices: ["Anne Catherick", "Laura Fairlie", "Marian Halcombe", "Mrs. Clements"],
-  answer: "Anne Catherick"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in Far from the Madding Crowd is the reckless soldier whose charm masks deep flaws?",
   choices: ["Sergeant Troy", "Boldwood", "Gabriel Oak", "Cainy Ball"],
-  answer: "Sergeant Troy"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In Little Dorrit, who is the suspicious and sharp-tongued servant in the Clennam household?",
   choices: ["Flintwinch", "Pancks", "Mrs. Plornish", "Fanny Dorrit"],
-  answer: "Flintwinch"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in The Scarlet Letter is described as 'a man of skill in all Christian modes of charity'?",
   choices: ["Arthur Dimmesdale", "Roger Chillingworth", "John Wilson", "Governor Bellingham"],
-  answer: "Arthur Dimmesdale"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In Villette, who is the charismatic doctor whose attentions confuse Lucy Snowe?",
   choices: ["Dr. John Graham", "M. Paul Emanuel", "Mr. Home", "Colonel de Bassompierre"],
-  answer: "Dr. John Graham"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in David Copperfield is the charming but destructive friend who betrays David?",
   choices: ["Steerforth", "Traddles", "Mr. Micawber", "Mr. Wickfield"],
-  answer: "Steerforth"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In The Picture of Dorian Gray, who is the chemist forced to help Dorian dispose of evidence?",
   choices: ["Alan Campbell", "Lord Henry", "James Vane", "Basil Hallward"],
-  answer: "Alan Campbell"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in The Mayor of Casterbridge is the Scotsman who becomes Henchard’s rival?",
   choices: ["Donald Farfrae", "Joshua Jopp", "Newson", "Lucetta Templeman"],
-  answer: "Donald Farfrae"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "In The Woodlanders, who is the gentle but overlooked suitor devoted to Grace Melbury?",
   choices: ["Giles Winterborne", "Edred Fitzpiers", "Marty South", "Tim Tangs"],
-  answer: "Giles Winterborne"
+  answer: 0
 },
 {
+  difficulty: "hard",
   question: "Which character in Wuthering Heights is the servant whose harsh religiosity shapes Hareton’s upbringing?",
   choices: ["Joseph", "Zillah", "Nelly Dean", "Mr. Green"],
-  answer: "Joseph"
+  answer: 0
 }
+
 
 
 
