@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Literary Characters Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font: Cormorant Garamond -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
+
+ <style>
+    :root {
+  --mint: #c8e9df;            /* slightly deeper mint */
+  --mint-dark: #7fb3a3;
+  --cream: #fff7e8;           /* warmer, higher contrast */
+  --ink: #1f1b1b;             /* darker text */
+  --accent: #a0643f;
+  --error: #7a1f2f;
+  --success: #1f5c36;
+  --radius: 18px;
+  --shadow-soft: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+  background: var(--mint);
+  color: var(--ink);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app {
+  background: var(--cream);
+  width: min(1000px, 100%);
+  margin: 20px;
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  padding: 28px 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 16px;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #ffffff, #f2e3cf);
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: 0.02em;
+}
+
+/* DIFFICULTY BUTTONS */
+.difficulty-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.difficulty-button {
+  border: 2px solid var(--mint-dark);
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-style: italic;
+  background: #fdf8f0;
+  color: var(--ink);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.difficulty-button:hover {
+  transform: translateY(-2px);
+}
+
+.difficulty-button.active {
+  background: var(--mint-dark);
+  color: #fff;
+}
+
+/* META ROW */
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+
+  font-weight: 700;      /* bold */
+  font-style: italic;    /* italic */
+
+  color: rgba(0, 0, 0, 0.92);  /* darker, richer ink */
+}
+
+
+/* QUESTION CARD */
+.question-card {
+  background: #ffffff;
+  border-radius: var(--radius);
+  padding: 26px 26px 22px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.question-text {
+  font-size: 1.6rem;
+  line-height: 1.45;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* CHOICES */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.choice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  transition: background 0.15s ease;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background: #f3e8d9;
+}
+
+.choice input[type="radio"] {
+  accent-color: var(--accent);
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.choice-label {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+/* BUTTONS */
+.buttons-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  border-radius: 999px;
+  border: 2px solid var(--accent);
+  padding: 12px 26px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-style: italic;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #fff;
+}
+
+.primary-btn:hover {
+  background: #8c5434;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: #fdf8f0;
+  color: var(--ink);
+}
+
+.secondary-btn:hover {
+  background: #f0e4d4;
+  transform: translateY(-2px);
+}
+
+/* FEEDBACK */
+.feedback {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+.feedback.correct {
+  background: #dff4e7;
+  color: var(--success);
+  border: 2px solid #a8d4b7;
+}
+
+.feedback.incorrect {
+  background: #f8dce0;
+  color: var(--error);
+  border: 2px solid #e4a8b1;
+}
+
+
+/* ---------------------------------------------------
+   EVERYTHING BELOW HERE IS PERFECTLY FINE
+---------------------------------------------------- */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 16px;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 20%, #ffffff, #f2e3cf);
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: 0.02em;
+}
+
+/* (…rest of your CSS unchanged…) */
+
+</style>
+
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div class="icon-title">
+        <div class="icon" aria-hidden="true">✒️</div>
+        <h1>Literary Characters Quiz</h1>
+      </div>
+      <div class="difficulty-buttons">
+        <button class="difficulty-button active" data-difficulty="easy">Easy</button>
+        <button class="difficulty-button" data-difficulty="medium">Medium</button>
+        <button class="difficulty-button" data-difficulty="hard">Hard</button>
+      </div>
+    </header>
+
+    <div class="meta-row">
+      <span id="difficulty-label">Difficulty: Easy</span>
+      <span id="progress-label">Question 1</span>
+      <span id="score-label">Score: 0</span>
+    </div>
+
+    <main class="question-card">
+      <div id="question-text" class="question-text">
+        Loading question…
+      </div>
+      <form id="choices-form" class="choices">
+        <!-- Choices injected here -->
+      </form>
+
+      <div class="buttons-row">
+        <button id="submit-btn" class="primary-btn" type="button">Submit answer</button>
+        <button id="next-btn" class="secondary-btn" type="button" disabled>Next question</button>
+      </div>
+
+      <div id="feedback" class="feedback" style="display:none;"></div>
+    </main>
+  </div>
+
+  <script>
+    // Question bank: mixed Austen / Brontë / Hardy
+    // difficulty: "easy" | "medium" | "hard"
+    const questions = [
+      // --- EASY (examples) ---
+      {
+        difficulty: "easy",
+        question: "Which heroine rejects Mr. Collins’s proposal in favour of love rather than convenience?",
+        choices: ["Elinor Dashwood", "Elizabeth Bennet", "Fanny Price", "Emma Woodhouse"],
+        answer: 1
+      },
+      {
+        difficulty: "easy",
+        question: "Who is the brooding master of Thornfield Hall in 'Jane Eyre'?",
+        choices: ["Heathcliff", "Mr. Rochester", "Mr. Darcy", "Gabriel Oak"],
+        answer: 1
+      },
+      {
+        difficulty: "easy",
+        question: "In which novel do we meet the spirited Bathsheba Everdene?",
+        choices: [
+          "Far from the Madding Crowd",
+          "Tess of the d’Urbervilles",
+          "The Mayor of Casterbridge",
+          "Jude the Obscure"
+        ],
+        answer: 0
+      },
+      {
+        difficulty: "easy",
+        question: "Which character famously declares that a single man in possession of a good fortune must be in want of a wife?",
+        choices: [
+          "Mrs. Bennet",
+          "Mr. Bennet",
+          "The narrator of 'Pride and Prejudice'",
+          "Lady Catherine de Bourgh"
+        ],
+        answer: 2
+      },
+      {
+        difficulty: "easy",
+        question: "Who is the quiet, observant governess at Thornfield Hall?",
+        choices: ["Jane Eyre", "Agnes Grey", "Helen Graham", "Catherine Earnshaw"],
+        answer: 0
+      },
+      {
+        difficulty: "easy",
+        question: "Which Austen heroine is described as handsome, clever, and rich?",
+        choices: ["Anne Elliot", "Emma Woodhouse", "Catherine Morland", "Marianne Dashwood"],
+        answer: 1
+      },
+      {
+        difficulty: "easy",
+        question: "Heathcliff is most closely associated with which wild, windswept setting?",
+        choices: ["Egdon Heath", "Casterbridge", "Wuthering Heights", "Bath"],
+        answer: 2
+      },
+      {
+        difficulty: "easy",
+        question: "Which Hardy character is a humble shepherd who remains steadfastly loyal?",
+        choices: ["Angel Clare", "Gabriel Oak", "Clym Yeobright", "Michael Henchard"],
+        answer: 1
+      },
+      {
+        difficulty: "easy",
+        question: "In 'Sense and Sensibility', which sister is more reserved and rational?",
+        choices: ["Marianne", "Elinor", "Lucy Steele", "Margaret"],
+        answer: 1
+      },
+      {
+        difficulty: "easy",
+        question: "Who is the shy, overlooked clergyman’s daughter in 'Agnes Grey'?",
+        choices: ["Agnes", "Jane", "Lucy", "Fanny"],
+        answer: 0
+      },
+
+      // --- MEDIUM (examples) ---
+      {
+        difficulty: "medium",
+        question: "Which character in 'Pride and Prejudice' is described as having a mixture of quick parts, sarcastic humour, and caprice?",
+        choices: ["Mr. Bennet", "Mr. Darcy", "Mr. Bingley", "Colonel Fitzwilliam"],
+        answer: 0
+      },
+      {
+        difficulty: "medium",
+        question: "In 'Wuthering Heights', who narrates much of the story to Mr. Lockwood?",
+        choices: ["Catherine Earnshaw", "Nelly Dean", "Isabella Linton", "Hareton Earnshaw"],
+        answer: 1
+      },
+      {
+        difficulty: "medium",
+        question: "Which Hardy heroine sends back a valentine that unintentionally entangles her with a farmer?",
+        choices: ["Tess Durbeyfield", "Bathsheba Everdene", "Eustacia Vye", "Sue Bridehead"],
+        answer: 1
+      },
+      {
+        difficulty: "medium",
+        question: "Anne Elliot’s lost love, later returned as a naval officer, is named:",
+        choices: [
+          "Captain Wentworth",
+          "Colonel Brandon",
+          "Captain Benwick",
+          "Mr. Knightley"
+        ],
+        answer: 0
+      },
+      {
+        difficulty: "medium",
+        question: "Which Brontë novel features the tenant of Wildfell Hall?",
+        choices: [
+          "Jane Eyre",
+          "Villette",
+          "The Tenant of Wildfell Hall",
+          "Shirley"
+        ],
+        answer: 2
+      },
+      {
+        difficulty: "medium",
+        question: "In 'Tess of the d’Urbervilles', Tess first works at which kind of establishment?",
+        choices: ["A dairy", "A poultry farm", "A large estate house", "A public inn"],
+        answer: 2
+      },
+      {
+        difficulty: "medium",
+        question: "Which character is known for his proud reserve but later proves deeply loyal to Jane Eyre?",
+        choices: ["St. John Rivers", "Mr. Rochester", "Mr. Brocklehurst", "John Reed"],
+        answer: 1
+      },
+      {
+        difficulty: "medium",
+        question: "In 'Far from the Madding Crowd', which suitor is a dashing but unreliable soldier?",
+        choices: ["Boldwood", "Gabriel Oak", "Sergeant Troy", "Clym Yeobright"],
+        answer: 2
+      },
+      {
+        difficulty: "medium",
+        question: "Which Austen character is obsessed with matchmaking and meddling in others’ romances?",
+        choices: ["Emma Woodhouse", "Elizabeth Bennet", "Fanny Price", "Catherine Morland"],
+        answer: 0
+      },
+      {
+        difficulty: "medium",
+        question: "In 'Jude the Obscure', Jude Fawley dreams of studying in which university town?",
+        choices: ["Cambridge", "Oxford (Christminster)", "Bath", "Exeter"],
+        answer: 1
+      },
+
+      // --- HARD (examples) ---
+      {
+        difficulty: "hard",
+        question: "Which minor character in 'Pride and Prejudice' is described as having a very small park and a comfortable house, and is eager to impress Lady Catherine?",
+        choices: ["Mr. Collins", "Sir William Lucas", "Mr. Hurst", "Colonel Forster"],
+        answer: 1
+      },
+      {
+        difficulty: "hard",
+        question: "In 'Jane Eyre', which character’s fortune comes from a Madeira connection and is later shared with Jane?",
+        choices: ["St. John Rivers", "Diana Rivers", "Mary Rivers", "Their uncle John Eyre"],
+        answer: 3
+      },
+      {
+        difficulty: "hard",
+        question: "Which Hardy character is known as the 'Reddleman', wandering the heath stained red from his trade?",
+        choices: ["Diggory Venn", "Giles Winterborne", "Jude Fawley", "Michael Henchard"],
+        answer: 0
+      },
+      {
+        difficulty: "hard",
+        question: "In 'Villette', Lucy Snowe’s feelings are most deeply engaged with which character?",
+        choices: ["Dr. John Graham Bretton", "M. Paul Emanuel", "Monsieur Pelet", "Mr. Home"],
+        answer: 1
+      },
+      {
+        difficulty: "hard",
+        question: "Which Austen character is criticised for having 'no conversation, no style, no taste, no beauty' but a large fortune?",
+        choices: ["Miss Grey", "Miss King", "Miss Bingley", "Miss Morton"],
+        answer: 3
+      },
+      {
+        difficulty: "hard",
+        question: "In 'The Return of the Native', which character is strongly associated with the bonfires on Guy Fawkes Night?",
+        choices: ["Thomasin Yeobright", "Eustacia Vye", "Clym Yeobright", "Diggory Venn"],
+        answer: 1
+      },
+      {
+        difficulty: "hard",
+        question: "Which Brontë novel features the character of Caroline Helstone?",
+        choices: ["Shirley", "Agnes Grey", "The Tenant of Wildfell Hall", "Villette"],
+        answer: 0
+      },
+      {
+        difficulty: "hard",
+        question: "In 'Mansfield Park', which character is most drawn to amateur theatricals, causing moral concern?",
+        choices: ["Fanny Price", "Edmund Bertram", "Mary Crawford", "Maria Bertram"],
+        answer: 2
+      },
+      {
+        difficulty: "hard",
+        question: "Which Hardy novel includes the tragic character of Sue Bridehead?",
+        choices: [
+          "The Mayor of Casterbridge",
+          "Jude the Obscure",
+          "The Woodlanders",
+          "Two on a Tower"
+        ],
+        answer: 1
+      },
+      {
+        difficulty: "hard",
+        question: "In 'Wuthering Heights', which character inherits Thrushcross Grange at the end of the novel?",
+        choices: ["Hareton Earnshaw", "Cathy Linton", "Linton Heathcliff", "Joseph"],
+        answer: 0
+      }
+
+      // We can keep extending this array together until we reach your full 200.
+    ];
+
+    let currentDifficulty = "easy";
+    let filteredQuestions = [];
+    let currentIndex = 0;
+    let currentQuestion = null;
+    let score = 0;
+    let questionCount = 0;
+
+    const difficultyButtons = document.querySelectorAll(".difficulty-button");
+    const difficultyLabel = document.getElementById("difficulty-label");
+    const progressLabel = document.getElementById("progress-label");
+    const scoreLabel = document.getElementById("score-label");
+    const questionTextEl = document.getElementById("question-text");
+    const choicesForm = document.getElementById("choices-form");
+    const submitBtn = document.getElementById("submit-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const feedbackEl = document.getElementById("feedback");
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function loadQuestionsForDifficulty(diff) {
+      currentDifficulty = diff;
+      filteredQuestions = questions.filter(q => q.difficulty === diff);
+      shuffle(filteredQuestions);
+      currentIndex = 0;
+      questionCount = 0;
+      score = 0;
+      scoreLabel.textContent = `Score: ${score}`;
+      loadNextQuestion();
+      difficultyLabel.textContent =
+        "Difficulty: " + diff.charAt(0).toUpperCase() + diff.slice(1);
+    }
+
+    function loadNextQuestion() {
+      feedbackEl.style.display = "none";
+      feedbackEl.textContent = "";
+      feedbackEl.className = "feedback";
+
+      if (filteredQuestions.length === 0) {
+        questionTextEl.textContent = "No questions available for this difficulty.";
+        choicesForm.innerHTML = "";
+        submitBtn.disabled = true;
+        nextBtn.disabled = true;
+        progressLabel.textContent = "Question 0";
+        return;
+      }
+
+      if (currentIndex >= filteredQuestions.length) {
+        shuffle(filteredQuestions);
+        currentIndex = 0;
+      }
+
+      currentQuestion = filteredQuestions[currentIndex];
+      questionCount++;
+      progressLabel.textContent = `Question ${questionCount}`;
+
+      questionTextEl.textContent = currentQuestion.question;
+      choicesForm.innerHTML = "";
+
+      currentQuestion.choices.forEach((choiceText, index) => {
+        const id = `choice-${index}`;
+        const wrapper = document.createElement("label");
+        wrapper.className = "choice";
+
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.name = "choice";
+        input.value = index;
+        input.id = id;
+
+        const span = document.createElement("span");
+        span.className = "choice-label";
+        span.textContent = choiceText;
+
+        wrapper.appendChild(input);
+        wrapper.appendChild(span);
+        choicesForm.appendChild(wrapper);
+      });
+
+      submitBtn.disabled = false;
+      nextBtn.disabled = true;
+    }
+
+    function getSelectedChoiceIndex() {
+      const selected = choicesForm.querySelector("input[name='choice']:checked");
+      if (!selected) return null;
+      return parseInt(selected.value, 10);
+    }
+
+    function handleSubmit() {
+      const selectedIndex = getSelectedChoiceIndex();
+      if (selectedIndex === null) {
+        feedbackEl.style.display = "block";
+        feedbackEl.className = "feedback incorrect";
+        feedbackEl.textContent = "Choose an answer first, my dear.";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      nextBtn.disabled = false;
+
+      const correctIndex = currentQuestion.answer;
+      const correctText = currentQuestion.choices[correctIndex];
+
+      if (selectedIndex === correctIndex) {
+        score++;
+        scoreLabel.textContent = `Score: ${score}`;
+        feedbackEl.style.display = "block";
+        feedbackEl.className = "feedback correct";
+        feedbackEl.textContent = "Correct — well done!";
+      } else {
+        feedbackEl.style.display = "block";
+        feedbackEl.className = "feedback incorrect";
+        feedbackEl.textContent = `Not quite — the answer was ${String.fromCharCode(65 + correctIndex)}: ${correctText}.`;
+      }
+
+      currentIndex++;
+    }
+
+    function handleNext() {
+      loadNextQuestion();
+    }
+
+    difficultyButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        difficultyButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const diff = btn.getAttribute("data-difficulty");
+        loadQuestionsForDifficulty(diff);
+      });
+    });
+
+    submitBtn.addEventListener("click", handleSubmit);
+    nextBtn.addEventListener("click", handleNext);
+
+    // Initial load
+    loadQuestionsForDifficulty("easy");
+  </script>
+</body>
+</html>
